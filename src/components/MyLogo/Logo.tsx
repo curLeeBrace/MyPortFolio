@@ -3,7 +3,7 @@ import ShinyText from "../ShinyText/ShinyText"
 const Logo = () => {
     return(
         <>
-            <ShinyText text="{ }"/>
+            <ShinyText text="{ }" disabled={false} speed={5} />
         </>
     )
 }

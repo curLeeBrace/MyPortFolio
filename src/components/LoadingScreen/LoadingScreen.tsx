@@ -4,7 +4,7 @@ import Squares from "../Squares/Squares"
 const LoadingScreen = () => {
 
     return(
-        <div className="w-dvw h-dvh">
+        <div className="w-dvw h-dvh bg-gray">
             <div className="w-full h-full">
                 <Squares direction="diagonal" squareSize={70}/>
 
