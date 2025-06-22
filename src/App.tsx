@@ -1,6 +1,5 @@
-import BarProgression from "./test_area/BarProgression"
-import Lorem from "./test_area/Lorem"
-
+// import {Routes, } from "react-dom"
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen"
 
 function App() {
   
@@ -8,16 +7,7 @@ function App() {
 
   return (
     <>
-      
-
-      <Lorem/>
-      <Lorem/>
-      <Lorem/>
-      <BarProgression/>
-      <Lorem/>
-      <Lorem/>
-      <Lorem/>
-      <Lorem/>
+      <LoadingScreen/>
 
 
     </>

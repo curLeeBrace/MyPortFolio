@@ -68,3 +68,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
+
+@theme {
+  --color-*: initial;
+  --color-royal-purple: #7E22CE;
+
+}
