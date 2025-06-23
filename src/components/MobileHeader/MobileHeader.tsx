@@ -4,19 +4,20 @@ import ShinyText from "../ShinyText/ShinyText"
 interface MobileHeaderProps {
     header_name : string
     setOpenSideNav : React.Dispatch<React.SetStateAction<boolean>>
+    bg_color? : string
 }
 
-const MobileHeader = ({header_name, setOpenSideNav}:MobileHeaderProps) => {
+const MobileHeader = ({header_name, setOpenSideNav, bg_color}:MobileHeaderProps) => {
 
     
     return(
-          <div className="h-14 bg-gray sticky top-0 flex items-center gap-4">
-                <div className="ml-2 w-12 h-12 active:bg-gray-700/50 rounded-full flex justify-center" onClick={()=> setOpenSideNav((prev:boolean)=> !prev)}>
+          <div className={`h-8 w-full pl-2 py-5 ${bg_color ? bg_color : "bg-gray"} sticky top-0 flex items-center gap-4`}>
+                <div className="w-8 h-8 active:bg-gray-700/50 rounded-full flex justify-center" onClick={()=> setOpenSideNav((prev:boolean)=> !prev)}>
                     <img src="/assets/ham_menu2.svg" className="ml-1"/>
                 </div>
                 
                 <div className="mb-1">
-                    <ShinyText text={`{ ${header_name} }`} speed={5} className="text-3xl"/>
+                    <ShinyText text={`${header_name}`} speed={5} className="text-2xl"/>
                 </div>
             </div>
     )
