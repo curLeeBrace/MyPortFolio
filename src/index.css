@@ -11,7 +11,7 @@
 
   /* color-scheme: light dark; */
   color: rgba(255, 255, 255, 0.87);
-  background-color: #ffffff;
+  background-color: #242424;
   /* letter-spacing: 1px; */
 
   /* font-synthesis: none;
@@ -26,8 +26,11 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  /* min-width: 320px;
-  min-height: 100vh; */
+  /* position: fixed; */
+  /* overflow-x: auto; */
+
+  /* min-width: 320px; */
+  min-height: 100vh;
 }
 
 
@@ -37,6 +40,9 @@ body {
   /* --color-*: initial; */
   --color-royal-purple: #7E22CE;
   --color-gray : #242424;
+  --color-dark-gray : #121212
+
+
 
   --animate-shine: shine 5s linear infinite;
   @keyframes shine {
