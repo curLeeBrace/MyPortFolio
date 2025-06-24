@@ -1,8 +1,76 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
+@theme {
+  /* COLOR */
+  --color-royal-purple: #7E22CE;
+  --color-gray : #242424;
+  --color-dark-gray : #141414;
 
-:root {
+  /* BREAKPOINTS*/
+
+  --breakpoint-xs: 15rem;
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ANIMATION */
+  --animate-shine: shine 5s linear infinite;
+
+  @keyframes shine {
+    0% { 
+      background-position: 100%;
+    }
+    100% { 
+      background-position: -100%;
+    }
+  }
+
+  --animate-star-movement-bottom: star-movement-bottom linear infinite alternate;
+  --animate-star-movement-top: star-movement-top linear infinite alternate;
+
+  @keyframes star-movement-bottom{
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100%{
+      transform: translate(-100%, 0%);
+      opacity: 0;
+    }
+  }
+
+    @keyframes star-movement-top{
+    0% {
+      transform: translate(0%, 0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(100%, 0%);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+#root {
 
   /* font-family: system-ui, Arial, Avenir, Helvetica,   Arial, sans-serif; */
   font-family: 'Fira Code', monospace;
@@ -10,49 +78,36 @@
   /* font-weight: 400; */
 
   /* color-scheme: light dark; */
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
   /* letter-spacing: 1px; */
 
   /* font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
+
+  /* margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute; */
+ 
+
   
 }
 
 
-body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  /* position: fixed; */
-  /* overflow-x: auto; */
-
-  /* min-width: 320px; */
-  min-height: 100vh;
-}
-
-
-
-
-@theme {
-  /* --color-*: initial; */
-  --color-royal-purple: #7E22CE;
-  --color-gray : #242424;
-  --color-dark-gray : #121212
-
-
-
-  --animate-shine: shine 5s linear infinite;
-  @keyframes shine {
-    0% { 
-      background-position: 100%;
-    },
-    100% { 
-      background-position: -100%;
-    }
+html, body {
+    /* height: 100%; */
+    margin: 0;
+    position: relative;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #141414;
+ 
   }
 
-}
+
+
+
+
+
 

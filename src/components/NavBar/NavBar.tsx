@@ -39,20 +39,21 @@ const NavBar = () => {
   const window_size = useWindowSize();
   const {scrollY} = useScroll()
 
-  const nav_bg_color =   useTransform(scrollY, [0, 10], ["#242424", "#121212"])
+  const nav_bg_color =   useTransform(scrollY, [0, 10], ["#141414", "#242424"])
 
-  // useMotionValueEvent(scrollY, "change", (current) => {
-  //   console.log(current)
-  // })
+  useMotionValueEvent(scrollY, "change", (current) => {
+    console.log(current)
+  })
 
   const [openSideNav, setOpenSideNav] = useState(false);
 
   useEffect(()=>{
       if(openSideNav){
-        document.body.style.position = "fixed";
+        document.body.style.overflowY = "hidden";
+        
       } 
       else {
-         document.body.style.position = "";
+         document.body.style.overflowY = "auto";
       }
 
  
@@ -62,8 +63,8 @@ const NavBar = () => {
   return (
     <>
       {window_size >= 768 ? (
-        <motion.div className={`h-14 sticky top-0 flex flex-col justify-center`} style={{backgroundColor : nav_bg_color}}>
-          <div className="absolute ml-5  text-[20px]">
+        <motion.div className={`h-14 z-50 sticky top-0 right-0 flex flex-col justify-center`} style={{backgroundColor : nav_bg_color}}>
+          <div className="absolute ml-5 text-[25px]">
             <Logo />
           </div>
 
@@ -84,18 +85,18 @@ const NavBar = () => {
           </div>
         </motion.div>
       ) : (
-        <div className="">
-          <div className="fixed top-0 w-full">
+        <div className="sticky w-full top-0 z-50">
+          <div className="w-full">
             <MobileHeader header_name="{-_-}" setOpenSideNav={setOpenSideNav} bg_color={nav_bg_color} />
-
           </div>
+
           <div
-            className={`h-full w-full fixed top-0  ${
-              openSideNav ? "bg-black/50 z-10" : "-z-10 delay-75"
+            className={`${
+              openSideNav && "bg-black/50 h-full w-full fixed top-0"
             }`}
           >
             <div
-              className={`bg-gray w-48 h-full duration-75  ${
+              className={`bg-gray w-48 h-full top-0 fixed duration-75  ${
                 openSideNav
                   ? "transition-transform ease-linear"
                   : " -translate-x-full transition-transform ease-linear"

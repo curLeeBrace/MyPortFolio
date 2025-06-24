@@ -1,37 +1,130 @@
-import { useEffect } from "react";
-
+import Particles from "../components/Particles/Particles";
+import {COLOR} from "../utils/color_picker";
+import FuzzyText from "../components/FuzzyText/FuzzyText";
+import usekWindowSize from "../custom_hooks/useWindowSize";
+import TrueFocus from "../components/TrueFocus/TrueFocus";
+import TiltedCard from "../components/TiltedCard/TiltedCard";
+import StarBorder from "../components/StarBorder/StarBorder";
+import CircularLogo from "../components/CircularLogo/CircularLogo";
 
 
 const Home = () => {
+    const windowSize = usekWindowSize();
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0); // Force scroll to top
-    //     const lockScroll = () => window.scrollTo(0, 0);
-    //     window.addEventListener("scroll", lockScroll);
-    //     return () => window.removeEventListener("scroll", lockScroll);
-    // }, []);
+
 
     return(
         <div className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, voluptate suscipit. Atque iusto laborum corrupti iure sapiente optio nihil sunt dolor molestias, maiores inventore? Magnam voluptatibus laudantium eius dolorum tenetur.
-            Maxime esse aspernatur est iure accusantium sunt expedita? Dolorem quaerat porro corrupti, eligendi iusto ipsa in, dignissimos quas facere reiciendis laborum. Enim in deserunt nam harum ab, optio possimus sapiente?
-            Dolores sint illum nisi temporibus explicabo fugit optio deleniti! Autem, deleniti voluptate saepe incidunt eius reiciendis veniam vel rerum omnis aliquam dolorem animi? Dicta perferendis, magnam sed distinctio quod ducimus.
-            Eligendi qui alias assumenda vero eum ex, tempora ad rem aperiam suscipit distinctio sed et quo illum quam adipisci commodi? Recusandae quod dolorum, maiores natus eum sequi eius consequuntur iste?
-            Officiis, at, ut, magni temporibus labore nemo harum ab quas tempore tenetur magnam quidem! Sequi, impedit odit? Odio nam, voluptate, a doloribus in praesentium doloremque provident dolores voluptas alias ex.
-            Blanditiis, pariatur eaque quam doloribus dicta amet itaque unde aperiam voluptatem aut rerum fugit voluptate quisquam consequatur error quis numquam nobis, commodi sit animi facilis assumenda? Reiciendis ab excepturi at!
-            Eveniet soluta vel nostrum, asperiores quibusdam minus odit, adipisci ipsam minima tenetur veritatis eius voluptatibus. Quae consequatur minus molestiae, vero odit, iste impedit perspiciatis pariatur nulla quisquam corporis eum? Repudiandae?
-            Dicta voluptatem, excepturi et nam omnis alias officiis molestias incidunt ullam commodi. Ea molestiae atque beatae autem saepe animi pariatur possimus ducimus aut omnis, dolorem quas, temporibus, delectus voluptatibus doloribus.
-            Dolores amet nulla eius delectus nobis ab quas voluptatem suscipit explicabo, molestiae recusandae nisi rem doloremque totam magnam, ipsum tempora commodi, vel cumque incidunt impedit beatae officiis asperiores voluptates! Odio?
-            Sint esse doloribus placeat est quis ad, at tenetur ex recusandae autem eius excepturi eaque unde fuga vel ducimus maxime necessitatibus officia ipsum? Dolor architecto aliquam necessitatibus doloremque sequi quasi!
-            Obcaecati ducimus ad rerum necessitatibus officiis optio, unde, repellendus dolore nemo eos quia, molestias laudantium excepturi aspernatur soluta. Earum nesciunt vero, consequatur quia eveniet numquam architecto necessitatibus quas placeat minima.
-    
+            <div className="relative h-[550px] xs:max-md:h-[800px] z-20 ">
+                <Particles
+                    particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
+                    moveParticlesOnHover
+                    particleCount={700}
+                    particleSpread={20}
+                    particleBaseSize={150}  
+                    speed={2}
+                    disableRotation                 
+                />
+          
+            </div>
 
-                Eveniet soluta vel nostrum, asperiores quibusdam minus odit, adipisci ipsam minima tenetur veritatis eius voluptatibus. Quae consequatur minus molestiae, vero odit, iste impedit perspiciatis pariatur nulla quisquam corporis eum? Repudiandae?
-            Dicta voluptatem, excepturi et nam omnis alias officiis molestias incidunt ullam commodi. Ea molestiae atque beatae autem saepe animi pariatur possimus ducimus aut omnis, dolorem quas, temporibus, delectus voluptatibus doloribus.
-            Dolores amet nulla eius delectus nobis ab quas voluptatem suscipit explicabo, molestiae recusandae nisi rem doloremque totam magnam, ipsum tempora commodi, vel cumque incidunt impedit beatae officiis asperiores voluptates! Odio?
-            Sint esse doloribus placeat est quis ad, at tenetur ex recusandae autem eius excepturi eaque unde fuga vel ducimus maxime necessitatibus officia ipsum? Dolor architecto aliquam necessitatibus doloremque sequi quasi!
-            Obcaecati ducimus ad rerum necessitatibus officiis optio, unde, repellendus dolore nemo eos quia, molestias laudantium excepturi aspernatur soluta. Earum nesciunt vero, consequatur quia eveniet numquam architecto necessitatibus quas placeat minima.
+            <div className="absolute top-0 flex items-center z-20 flex-wrap w-full h-full lg:max-2xl:mt-[30px]">
+                {/* Image*/}
+                <div className="flex-1/3 xs:max-lg:mt-[50px] xs:max-lg:px-[50px] xs:max-sm:h-[300px] md:max-xl:min-w-[410px] h-[525px] lg:max-2xl:p-10 ">
+                    <TiltedCard
+                        imageSrc="/assets/me/me1.jpg"
+                        containerHeight={"100%"}
+                        containerWidth={"100%"}
+                        imageWidth={'100%'}
+                        imageHeight={"100%"}
+                        showTooltip = {false}
+                        
+                    />
+                </div>
+                {/*Textt*/}
+                <div className="flex-1/2 pb-10 h-[500px] xs:max-lg:h-auto xs:max-sm:w-full lg:max-2xl:mt-[80px] flex flex-col xs:mt-[20px]">
+
+                    <div className="border-white">
+                        <FuzzyText 
+                            fontSize={windowSize > 620 ? 50 : 25}
+                            baseIntensity={0.150} 
+                            
+                            
+                        >
+                            Hi I'm Lee Andrei.
+                        </FuzzyText>
+
+                    </div>
+
+                    <div className="mt-2 border-white">
+                        <FuzzyText 
+                            fontSize={windowSize > 620 ? 50 : 25}
+                            baseIntensity={0.150} 
+                        >
+                            I'm Unemployed
+                        </FuzzyText>
+
+                    </div>
+
+                    <div className="mt-2 pl-15 pr-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore explicabo ratione a reiciendis delectus ullam id, totam vero aut, voluptate dolorum debitis eaque ipsa at illum tenetur, enim cum. Hic?
+                    </div>
+
+                    <div className="mt-5 ">
+                        <TrueFocus
+                            borderColor={COLOR["royal-purple"]}
+                            sentence="Please Hire Me"
+                            size={windowSize < 1024 ? 2 : 3}
+                            
+
+
+                        />
+                    </div>
+
+                    <div className="mt-7 flex justify-center">
+                        <StarBorder
+                            as = "button"
+                            thickness= {2.5}
+                            color={COLOR["royal-purple"]}
+                            speed="2s"
+                            className="hover:scale-110 ease-in-out duration-200"
+                        >
+                            VIEW MY WORKS
+                        </StarBorder>
+                    </div>
+
+                    <div className="flex gap-5 mt-5 h-[50px] xs:max-md:justify-center lg:max-2xl:ml-15 ">
+                        <div className="w-[50px] h-full">
+                            <CircularLogo 
+                                src="/assets/github.svg"
+                                border_size=".1em"
+                                link="https://github.com/curLeeBrace"
+                            />
+                        </div>
+
+                        <div className="w-[50px] h-full">
+                            <CircularLogo 
+                                src="/assets/instagram.svg"
+                                border_size=".1em"
+                            />
+                        </div>
+
+                          <div className="w-[50px] h-full">
+                            <CircularLogo 
+                                src="/assets/fb.svg"
+                                border_size=".1em"
+                                link="https://web.facebook.com/curleebrace"
+                            />
+                        </div>
+
+                        
+
+                        {/* <>{windowSize}</> */}
+                    </div>
     
+                </div>
+            </div>
+            
         </div>
     )
 }

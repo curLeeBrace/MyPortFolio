@@ -1,6 +1,6 @@
 import ShinyText from "../ShinyText/ShinyText"
 import { motion, MotionValue } from "motion/react";
-import COLOR from "../../utils/color_picker";
+import {COLOR} from "../../utils/color_picker";
 
 interface MobileHeaderProps {
     header_name : string
@@ -14,7 +14,7 @@ const MobileHeader = ({header_name, setOpenSideNav, bg_color}:MobileHeaderProps)
     
     return(
           <motion.div className={`h-14 w-full pl-2 py-5 sticky top-0 flex items-center gap-4`} style={{backgroundColor : bg_color ? bg_color : COLOR.gray}}>
-                <div className="w-8 h-8 active:bg-gray-700/50 rounded-full flex justify-center" onClick={()=> setOpenSideNav((prev:boolean)=> !prev)}>
+                <div className="w-8 h-9 active:bg-gray-700/50 rounded-full flex justify-center" onClick={()=> setOpenSideNav((prev:boolean)=> !prev)}>
                     <img src="/assets/ham_menu2.svg" className="ml-1"/>
                 </div>
                 
