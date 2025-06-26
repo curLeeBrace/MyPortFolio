@@ -26,10 +26,6 @@ const LINKS: ILINKS[] = [
     url_display_name: "Portfolio",
   },
   {
-    url: "/resume",
-    url_display_name: "Resume",
-  },
-  {
     url: "/contact",
     url_display_name: "Contact",
   },

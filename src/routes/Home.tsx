@@ -15,22 +15,25 @@ const Home = () => {
 
     return(
         <div className="">
-            <div className="relative h-[550px] xs:max-md:h-[800px] z-20 ">
-                <Particles
-                    particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
-                    moveParticlesOnHover
-                    particleCount={700}
-                    particleSpread={20}
-                    particleBaseSize={150}  
-                    speed={2}
-                    disableRotation                 
-                />
+            {/* <div className="relative z-20 "> */}
+                <div className="fixed h-full w-full">
+                    <Particles
+                        particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
+                        moveParticlesOnHover
+                        particleCount={700}
+                        particleSpread={20}
+                        particleBaseSize={150}  
+                        speed={2}
+                        disableRotation                 
+                    />
+
+                </div>
           
-            </div>
+            {/* </div> */}
 
             <div className="absolute top-0 flex items-center z-20 flex-wrap w-full h-full lg:max-2xl:mt-[30px]">
                 {/* Image*/}
-                <div className="flex-1/3 xs:max-lg:mt-[50px] xs:max-lg:px-[50px] xs:max-sm:h-[300px] md:max-xl:min-w-[410px] h-[525px] lg:max-2xl:p-10 ">
+                <div className="flex-1/3 xs:max-lg:mt-[75px] xs:max-lg:px-[50px] xs:max-sm:h-[300px] md:max-xl:min-w-[410px] h-[525px] lg:max-2xl:p-10 ">
                     <TiltedCard
                         imageSrc="/assets/me/me1.jpg"
                         containerHeight={"100%"}
@@ -70,11 +73,11 @@ const Home = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore explicabo ratione a reiciendis delectus ullam id, totam vero aut, voluptate dolorum debitis eaque ipsa at illum tenetur, enim cum. Hic?
                     </div>
 
-                    <div className="mt-5 ">
+                    <div className="mt-5">
                         <TrueFocus
                             borderColor={COLOR["royal-purple"]}
                             sentence="Please Hire Me"
-                            size={windowSize < 1024 ? 2 : 3}
+                            size={windowSize < 1024 ? 2: 3}
                             
 
 
@@ -93,7 +96,7 @@ const Home = () => {
                         </StarBorder>
                     </div>
 
-                    <div className="flex gap-5 mt-5 h-[50px] xs:max-md:justify-center lg:max-2xl:ml-15 ">
+                    <div className="flex gap-5 mt-5 h-[50px] xs:max-md:justify-center md:max-2xl:ml-15 ">
                         <div className="w-[50px] h-full">
                             <CircularLogo 
                                 src="/assets/github.svg"
