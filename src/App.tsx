@@ -4,7 +4,12 @@ import Logo from "./components/MyLogo/Logo"
 import NavBar from "./components/NavBar/NavBar"
 import Home from "./routes/Home"
 import Test from "./test_area/Test"
-import About from "./routes/About"
+import About from "./routes/About/About"
+import Particles from "./components/Particles/Particles"
+
+
+
+import { COLOR } from "./utils/color_picker"
 
 function App() {
   
@@ -12,8 +17,21 @@ function App() {
 
   return (
     <>
+     <div className="fixed h-full w-full">
+        <Particles
+            particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
+        
+            particleCount={700}
+            particleSpread={20}
+            particleBaseSize={150}  
+            speed={2}
+            disableRotation
+                              
+        />
+    
+      </div>
       <NavBar/>
-      {/* <LoadingScreen/> */}
+
       <Routes>
         <Route path="/" element = {<Home/>}/>
         <Route path="/home" element = {<Home/>}/>

@@ -1,27 +1,21 @@
-import Synergy from "../components/Synergy/Synergy";
-
+import OrgCard from "../components/OrgCard/OrgCard";
+import BarProgression from "./BarProgression";
 const Test = () => {
   return (
     <div className="flex justify-center">
-        <div className=" w-1/2 h-[70px]">
-          <Synergy  
-            img_src="assets/about/skill_logo/java.png"
-            rate={5}
-            title="Java"
-
+        <div className="w-full h-[300px] ">
+          <OrgCard
+            img_src="/assets/me/me1.jpg"
+            title="Laguna University"
+            description="asdasdasdajbdabxcysgdahsdbasndaslkdhasjkdgaskjdgajsdhajsdasdasasdasasdaasdasdasd"
+            other_description="2022 - 2025"
+            width="100%"
+            height="100%"
           />
-
+          
         </div>
+     
 
-         {/* <div className="border-2 border-red-500 w-1/2">
-          <Synergy  
-            img_src="/vite.svg"
-            rate={8}
-            title="Vite"
-
-          />
-
-        </div> */}
 
         
  

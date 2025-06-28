@@ -16,18 +16,7 @@ const Home = () => {
     return(
         <div className="">
             {/* <div className="relative z-20 "> */}
-                <div className="fixed h-full w-full">
-                    <Particles
-                        particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
-                        moveParticlesOnHover
-                        particleCount={700}
-                        particleSpread={20}
-                        particleBaseSize={150}  
-                        speed={2}
-                        disableRotation                 
-                    />
 
-                </div>
           
             {/* </div> */}
 
@@ -102,6 +91,7 @@ const Home = () => {
                                 src="/assets/github.svg"
                                 border_size=".1em"
                                 link="https://github.com/curLeeBrace"
+                                padding={10}    
                             />
                         </div>
 
@@ -109,6 +99,8 @@ const Home = () => {
                             <CircularLogo 
                                 src="/assets/instagram.svg"
                                 border_size=".1em"
+                                padding={10}
+
                             />
                         </div>
 
@@ -117,6 +109,8 @@ const Home = () => {
                                 src="/assets/fb.svg"
                                 border_size=".1em"
                                 link="https://web.facebook.com/curleebrace"
+                                padding={10}
+
                             />
                         </div>
 

@@ -22,12 +22,14 @@ const Synergy = ({img_src, title, rate}:SynergyProps) => {
 
     
     return(
-        <div className= {`w-full h-full min-w-[100px] flex gap-7`}>
+        <div className= {`w-full h-full min-w-[100px] flex gap-6`}>
 
-            <div className="flex-1/3 shrink-0 flex justify-end">
+            <div className="flex-[8%] shrink-0 flex justify-center ">
                 <CircularLogo
                     src= {img_src}
-                    size={100}
+                    size="100%"
+                    padding={10}
+                   
                 />
             </div>
 
@@ -36,13 +38,13 @@ const Synergy = ({img_src, title, rate}:SynergyProps) => {
                 {/* Title and Rate*/}
                 <div className="text-start mb-[5px] ml-[10px]">
                     <span>
-                        <b className="text-lg">{title}</b> {rate}/10
+                        <span className="text-lg font-semibold ">{title}</span> <span className="text-white/80">{rate}/10</span>
                     </span>
 
                 </div>
 
                 {/* Progressive Bar */}
-                <div className="border-2 rounded-2xl p-1 h-[45%]">
+                <div className="border-2 rounded-2xl p-1 h-[40%]">
                     <div className={`bg-royal-purple h-full rounded-2xl transition-all duration-700 ease-in-out shadow-[0_0_20px_5px_rgba(126,34,206,0.6)]`}
                         style={{
                             width: rate > 10 ?"100%" : width 
