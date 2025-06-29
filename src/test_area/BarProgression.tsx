@@ -19,13 +19,13 @@ const BarProgression = () => {
 
 
   return (
-    <div ref={ref} className="bg-amber-400 h-96">
+    <div ref={ref} className="h-96">
         <motion.div
-          className="w-20"
+          className="w-20 border-2 bg-blue-900"
           style={{
             // scaleY : scrollY,
 
-            backgroundColor : "black",
+            // backgroundColor : "black",
             height : height,
             originX: 0
           }}

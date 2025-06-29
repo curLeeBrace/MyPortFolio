@@ -2,7 +2,7 @@
 import Synergy from "../../components/Synergy/Synergy";
 import CircularLogo from "../../components/CircularLogo/CircularLogo";
 import ShinyText from "../../components/ShinyText/ShinyText";
-
+import Header from "../../components/Header/Header";
 
 
 interface SkillInterface {
@@ -136,11 +136,11 @@ const Skills = () => {
                 <div className="flex-[65%] flex flex-col ">
 
 
-                    <div className="ml-[10px]">
-                       <ShinyText text="{SKILLS}" disabled={false} speed={5} className="bg-royal-purple text-[45px] font-bold"/>
+                    <div className="ml-[25px]">
+                       <Header header_name="{Skills}"/>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mt-[10px]">
+                    <div className="flex flex-wrap gap-2 mt-[15px]">
                         {
                             skills.map((skill)=>(
                                 <div className="flex-[33%] shrink-0 h-[70px]">

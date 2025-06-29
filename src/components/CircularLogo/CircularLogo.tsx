@@ -16,11 +16,13 @@ const CircularLogo = ({src, border_color = "#7E22CE",border_size = "5px", size =
 
     return(
         <div 
-            className={`aspect-square p-[${String(padding)}px] overflow-hidden rounded-full relative hover:scale-110 ease-in-out duration-200 ${link ? "cursor-pointer" : ""}`}
+            className={`aspect-square overflow-hidden rounded-full relative hover:scale-110 ease-in-out duration-200 ${link ? "cursor-pointer" : ""}`}
             style={border_none ? {
-                maxWidth : size
+                maxWidth : size,
+                padding : `${padding}px`
             } :
             {
+                padding : `${padding}px`,
                 maxWidth : size,
                 borderColor : border_color,
                 borderWidth : border_size

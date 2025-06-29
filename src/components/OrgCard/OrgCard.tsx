@@ -23,6 +23,7 @@ const OrgCard = ({description, img_src, other_description, title, width = "500px
                     src={img_src}
                     border_none
                     size="100%"
+                    
                 />
             </div>
 
