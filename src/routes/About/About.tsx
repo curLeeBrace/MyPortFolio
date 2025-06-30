@@ -1,7 +1,7 @@
 import Skills from "./Skills";
-
 import Education from "./Education";
 import Experience from "./Experience";
+import Certificates from "./Certificates";
 
 const About = () => {
     
@@ -12,6 +12,7 @@ const About = () => {
             <Skills/>
             <Education/>
             <Experience/>
+            <Certificates/>
         </div>
     )
 }

@@ -1,43 +1,67 @@
-import OrgCard from "../components/OrgCard/OrgCard";
-import BarProgression from "./BarProgression";
-import Lorem from "./Lorem";
+import SpotlightCard from "../components/SpotlightCard/SpotlightCard";
+import Modal from "../components/Modal/Modal";
+import { useState } from "react";
 
-import OrgCardWithIMGBG from "../components/OrgCard/OrgCardWithIMGBG";
+
+
+const base_url = "/assets/about/certificates"
+const certificate_url : string[] = [
+    `${base_url}/cert1.png`,
+    `${base_url}/cert3.png`,
+    `${base_url}/cert 3-1.png`,
+    `${base_url}/cert 3-2.png`,
+    `${base_url}/cert 3-3.png`,
+    `${base_url}/cert 3-4.png`,
+]
+
+
 const Test = () => {
+  const [show, setShow] = useState(false);
+  const [certUrl, setCertUrl] = useState<string>("");
+
+
+
   return (
     <div className="flex justify-center">
 
-      <div className="w-1/2 h-[300px]">
-          {/* <OrgCardWithIMGBG
-          
-          /> */}
+      {
+        show && <Modal setShow={setShow}>
+            <SpotlightCard>
+                  <img src={certUrl} className="object-contain "/>
+              </SpotlightCard>
+        </Modal>
+      }
+  
+
+      <div className="flex flex-wrap justify-around">
+        {
+          certificate_url.map((url, index)=>(
+
+            <div key={index} className="w-[40%] min-w-[500px] h-auto mt-[50px]"
+              onClick={()=>{
+                setShow((prev) => !prev)
+                setCertUrl(url)
+              }}
+            
+            >
+                
+              <SpotlightCard>
+                  <img src={url} className="object-contain "/>
+              </SpotlightCard>
+
+            </div>
+          ))
+        }
+
       </div>
-              {/* <div className="relative w-[10px] h-96 rounded-b-full bg-[linear-gradient(to_bottom,_rgba(126,34,206,0)_0%,_rgba(126,34,206,0.6)_100%)]"
-               
-                >
-                    <div className="absolute bottom-0  left-1/2 -translate-x-1/2 w-full aspect-square rounded-full shadow-[0px_0px_20px_15px_rgba(126,34,206)] bg-[rgb(156,93,211)] animate-pulse">
-                      
-                    </div>
-
-                </div> */}
 
 
-        {/* <div className="w-full h-[300px] ">
-          <OrgCard
-            img_src="/assets/me/me1.jpg"
-            title="Laguna University"
-            description="asdasdasdajbdabxcysgdahsdbasndaslkdhasjkdgaskjdgajsdhajsdasdasasdasasdaasdasdasd"
-            other_description="2022 - 2025"
-            width="100%"
-            height="100%"
-          />
-          
-        </div> */}
-     
 
 
-        
- 
+
+
+
+      
     </div>
   );
 };

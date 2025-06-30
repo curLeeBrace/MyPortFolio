@@ -22,7 +22,7 @@ const Education = () => {
   const height = useTransform(springSroll, [0, 1], ["0%", "100%"]);
 
   return (
-    <div className="relative h-auto  flex mt-52 flex-col px-[100px] gap-10" ref={ref}>
+    <div className="relative h-auto  flex mt-96 flex-col px-[100px] gap-10" ref={ref}>
       <div className="self-center">
         <Header header_name="{Education}" />
       </div>

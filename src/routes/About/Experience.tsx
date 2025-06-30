@@ -12,7 +12,7 @@ const orgs_info = [{
 
 const Experience = () =>{
     return(
-        <div className="flex flex-col mt-52 px-[50px] mb-[150px]">
+        <div className="flex flex-col mt-96 px-[50px]">
             <div className="self-center">
                 <Header header_name="{Work Experience}"/>
             </div>
