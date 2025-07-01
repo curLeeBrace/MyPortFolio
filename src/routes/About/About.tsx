@@ -9,9 +9,9 @@ const About = () => {
 
     return(
         <div >
-            {/* <Skills/>
+            <Skills/>
             <Education/>
-            <Experience/> */}
+            <Experience/>
             <Certificates/>
         </div>
     )

@@ -14,15 +14,11 @@ const Home = () => {
 
 
     return(
-        <div className="">
-            {/* <div className="relative z-20 "> */}
+        
 
-          
-            {/* </div> */}
-
-            <div className="absolute top-0 flex items-center z-20 flex-wrap w-full h-full lg:max-2xl:mt-[30px]">
+            <div className="flex items-center flex-wrap">
                 {/* Image*/}
-                <div className="flex-1/3 xs:max-lg:mt-[75px] xs:max-lg:px-[50px] xs:max-sm:h-[300px] md:max-xl:min-w-[410px] h-[525px] lg:max-2xl:p-10 ">
+                <div className="flex-[20%] h-[500px] xs:min-w-[300px] lg:min-w-[400px] xs:max-sm:px-[50px] xs:max-sm:pt-[50px]  sm:p-[10px] lg:p-[30px]">
                     <TiltedCard
                         imageSrc="/assets/me/me1.jpg"
                         containerHeight={"100%"}
@@ -33,12 +29,13 @@ const Home = () => {
                         
                     />
                 </div>
+
                 {/*Textt*/}
                 <div className="flex-1/2 pb-10 h-[500px] xs:max-lg:h-auto xs:max-sm:w-full lg:max-2xl:mt-[80px] flex flex-col xs:mt-[20px]">
 
                     <div className="border-white">
                         <FuzzyText 
-                            fontSize={windowSize > 620 ? 50 : 25}
+                            fontSize={windowSize > 768 ? 50 : 25}
                             baseIntensity={0.150} 
                             
                             
@@ -50,7 +47,7 @@ const Home = () => {
 
                     <div className="mt-2 border-white">
                         <FuzzyText 
-                            fontSize={windowSize > 620 ? 50 : 25}
+                            fontSize={windowSize > 768 ? 50 : 25}
                             baseIntensity={0.150} 
                         >
                             I'm Unemployed
@@ -66,7 +63,8 @@ const Home = () => {
                         <TrueFocus
                             borderColor={COLOR["royal-purple"]}
                             sentence="Please Hire Me"
-                            size={windowSize < 1024 ? 2: 3}
+                            size={windowSize <= 768 ? 2: 3}
+                            // size = {3}
                             
 
 
@@ -122,7 +120,6 @@ const Home = () => {
                 </div>
             </div>
             
-        </div>
     )
 }
 
