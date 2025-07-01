@@ -46,7 +46,7 @@ const Certificates = () => {
                 {
                     certificate_url.map((url, index) => (   
                         
-                        <motion.div key={index} className="w-[40%] min-w-[500px] h-auto mt-[50px] cursor-pointer"
+                        <motion.div key={index} className="w-[40%] xs:min-w-[320px] lg:min-w-[500px] h-auto mt-[50px] cursor-pointer"
                             initial = {{
                                 opacity : 0
                             }}

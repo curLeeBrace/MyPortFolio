@@ -14,7 +14,7 @@ const Experience = () =>{
     return(
         <div className="flex flex-col mt-96 px-[50px]">
             <div className="self-center">
-                <Header header_name="{Work Experience}"/>
+                <Header header_name="{Experience}"/>
             </div>
 
            {
@@ -40,6 +40,7 @@ const Experience = () =>{
                             logo_url={logo_url}
                             other_description={other_description}
                             title={title}
+                            
                         />
 
                     </motion.div>

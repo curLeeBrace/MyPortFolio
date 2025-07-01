@@ -23,7 +23,7 @@ const Modal = ({children, setShow}:ModalProps) => {
     return(
         <div className="fixed z-50 top-0 left-0 flex flex-col w-full h-full justify-center items-center bg-black/80 px-[10px]">
             
-            <div className="self-end absolute top-5 right-15 text-3xl cursor-pointer hover:text-royal-purple"
+            <div className="self-end m-[10px] text-3xl cursor-pointer hover:text-royal-purple"
                 onClick={()=>{
                     setShow(false)
                 }}

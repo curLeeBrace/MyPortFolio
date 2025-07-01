@@ -85,15 +85,15 @@ const Skills = () => {
         
             
             {/* Profile and Skills */}
-            <div className="flex mt-[50px] px-[40px] gap-20">
+            <div className="flex flex-wrap mt-[50px] px-[40px] gap-20">
                 
                 {/* My Picture */}
-                <div className="flex-[30%] flex flex-col ">
-                    <div className="flex-auto w-full self-center flex justify-center">
+                <div className="lg:flex-[20%] xs:flex-[100%] xs:max-lg:items-center lg:min-w-[250px] flex flex-col">
+                    <div className="xs:max-lg:max-w-[500px]">
                         <CircularLogo
                             src="/assets/me/me1.jpg"
                             size="100%"
-                            border_none
+                            // border_none
                           
                             
                         />
@@ -140,10 +140,10 @@ const Skills = () => {
                        <Header header_name="{Skills}"/>
                     </div>
 
-                    <div className="flex flex-wrap gap-2 mt-[15px]">
+                    <div className="flex flex-wrap gap-2 mt-[15px] ">
                         {
                             skills.map((skill)=>(
-                                <div className="flex-[33%] shrink-0 h-[70px]">
+                                <div className="flex-[33%] shrink-0 h-[70px] ">
                                     <Synergy
                                         img_src = {skill.img_src}
                                         rate = {skill.rate}

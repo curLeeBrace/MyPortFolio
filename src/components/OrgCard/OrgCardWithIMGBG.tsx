@@ -28,7 +28,7 @@ const OrgCardWithIMGBG = ({bg_url = "/assets/about/org_photos/elyon_solution/ely
         
             />
         </div>
-        <div className="absolute h-[35%] w-full mt-[15px] pl-[40px]">
+        <div className="absolute h-[35%] w-full mt-[15px]">
             <OrgCard
                 img_src={logo_url}
                 title={title}
