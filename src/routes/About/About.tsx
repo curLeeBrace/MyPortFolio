@@ -5,8 +5,6 @@ import Certificates from "./Certificates";
 
 const About = () => {
     
-
-
     return(
         <div >
             <Skills/>
