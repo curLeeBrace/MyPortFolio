@@ -21,16 +21,18 @@ const Modal = ({children, setShow}:ModalProps) => {
     },[])
 
     return(
-        <div className="fixed z-50 top-0 left-0 flex flex-col w-full h-full justify-center items-center bg-black/80 px-[10px]">
+        <div className="fixed z-50 top-0 left-0 flex flex-col w-full h-full justify-center items-center bg-black/80 px-[10px] border-2">
             
-            <div className="self-end m-[10px] text-3xl cursor-pointer hover:text-royal-purple"
-                onClick={()=>{
-                    setShow(false)
-                }}
-            >x</div>
+           
 
-            <div className={`${vissible ? "translate-y-0 opacity-100 transition-all max-w-[800px] delay-200 ease-in" : "-translate-y-5 opacity-0"}`}>
+            <div className={`${vissible ? "relative translate-y-0 opacity-100 transition-all max-w-[800px] delay-200 ease-in" : "-translate-y-5 opacity-0"}`}>
                 {children}
+            
+                <div className="absolute -top-10 right-3 text-4xl cursor-pointer hover:text-royal-purple"
+                    onClick={()=>{
+                        setShow(false)
+                    }}
+                >x</div>
             </div>
         </div>
     )

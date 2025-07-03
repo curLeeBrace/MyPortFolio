@@ -16,6 +16,64 @@ const src_skill_logo = "/assets/about/skill_logo"
 
 const skills:SkillInterface[] = [
     {
+       img_src : `${src_skill_logo}/typescript.png`,
+       rate : 8,
+       title : "TypeScript" 
+   },
+
+   {
+       img_src : `${src_skill_logo}/java.png`,
+       rate : 7.5,
+       title : "Java" 
+   },
+
+   {
+       img_src : `${src_skill_logo}/python.png`,
+       rate : 6.9,
+       title : "Python" 
+   },
+
+    {
+       img_src : `${src_skill_logo}/javascript.svg`,
+       rate : 8,
+       title : "JavaScript" 
+   },
+
+   {
+       img_src : `${src_skill_logo}/react.png`,
+       rate : 7.8,
+       title : "React" 
+   },
+
+    {
+       img_src : `${src_skill_logo}/tailwind-css.svg`,
+       rate : 7.5,
+       title : "Tailwind" 
+   },
+
+    {
+       img_src : `${src_skill_logo}/mysql-database.png`,
+       rate : 8.3,
+       title : "MySql" 
+   },
+
+   {
+       img_src : `${src_skill_logo}/mongodb.svg`,
+       rate : 7.7,
+       title : "MonggoDB" 
+   },
+
+   {
+       img_src : `${src_skill_logo}/Odoo.png`,
+       rate : 7.2,
+       title : "Odoo" 
+   },
+    {
+       img_src : `${src_skill_logo}/sap.svg`,
+       rate : 7.4,
+       title : "SAP" 
+   },
+    {
         img_src : `${src_skill_logo}/html.png`,
         rate : 8,
         title : "HTML" 
@@ -27,52 +85,6 @@ const skills:SkillInterface[] = [
         title : "CSS" 
     },
 
-     {
-        img_src : `${src_skill_logo}/typescript.png`,
-        rate : 8,
-        title : "TypeScript" 
-    },
-
-    {
-        img_src : `${src_skill_logo}/java.png`,
-        rate : 7.5,
-        title : "Java" 
-    },
-
-    {
-        img_src : `${src_skill_logo}/python.png`,
-        rate : 6.9,
-        title : "Python" 
-    },
-
-    {
-        img_src : `${src_skill_logo}/react.png`,
-        rate : 7.8,
-        title : "React" 
-    },
-
-     {
-        img_src : `${src_skill_logo}/mysql-database.png`,
-        rate : 8.3,
-        title : "MySql" 
-    },
-
-    {
-        img_src : `${src_skill_logo}/mongodb.svg`,
-        rate : 7.7,
-        title : "MonggoDB" 
-    },
-
-    {
-        img_src : `${src_skill_logo}/Odoo.png`,
-        rate : 7.2,
-        title : "Odoo" 
-    },
-     {
-        img_src : `${src_skill_logo}/sap.svg`,
-        rate : 7.4,
-        title : "SAP" 
-    },
 ]
 
 
@@ -85,7 +97,7 @@ const Skills = () => {
         
             
             {/* Profile and Skills */}
-            <div className="flex flex-wrap mt-[50px] px-[40px] gap-20">
+            <div className="flex flex-wrap mt-[20px] px-[40px] gap-20">
                 
                 {/* My Picture */}
                 <div className="lg:flex-[20%] xs:flex-[100%] xs:max-lg:items-center lg:min-w-[250px] flex flex-col">
