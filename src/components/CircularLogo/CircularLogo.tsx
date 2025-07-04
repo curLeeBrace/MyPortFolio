@@ -88,7 +88,7 @@ const CircularLogo = ({src, border_color = "#7E22CE",border_size = "5px", border
 
             {
                 tooltip &&
-                <div className={`absolute px-[10px] rounded-md bg-dark-gray border-royal-purple border-[1px]  text-royal-purple text-nowrap ${isMouseEntered ? "opacity-100 transition-opacity delay-150 duration-150 ease-in" : "opacity-0"}`}
+                <div className={`absolute px-[10px] z-10 rounded-md bg-dark-gray border-royal-purple border-[1px]  text-royal-purple text-nowrap ${isMouseEntered ? "opacity-100 transition-opacity delay-150 duration-150 ease-in" : "opacity-0"}`}
                     style={{
                         top: position.y - 25,
                         left: position.x + 5,

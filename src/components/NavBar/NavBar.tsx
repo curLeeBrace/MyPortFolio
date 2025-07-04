@@ -19,7 +19,7 @@ const LINKS: ILINKS[] = [
   },
   {
     url: "/about-me",
-    url_display_name: "About Me",
+    url_display_name: "About",
   },
   {
     url: "/my-works",
@@ -70,7 +70,7 @@ const NavBar = () => {
                 to={url}
                 key={index}
                 className={({ isActive }) =>
-                  `flex justify-center items-center rounded-sm px-2 h-full hover:bg-black/50 active:bg-white/10 ${
+                  `flex justify-center items-center rounded-sm px-2 h-full hover:bg-black/50 transition-colors duration-250 ease-in active:bg-white/10 ${
                     isActive ? "text-royal-purple" : ""
                   }`
                 }
@@ -81,10 +81,13 @@ const NavBar = () => {
           </div>
         </motion.div>
       ) : (
-        <div className="sticky w-full top-0 z-50">
+        <div className="sticky top-0 z-50 w-full">
+
           <div className="w-full">
-            <MobileHeader header_name="{-_-}" setOpenSideNav={setOpenSideNav} bg_color={nav_bg_color} />
+              <MobileHeader header_name="CURLEE { }" setOpenSideNav={setOpenSideNav} bg_color={nav_bg_color} />
+
           </div>
+  
 
           <div
             className={`${
@@ -92,14 +95,15 @@ const NavBar = () => {
             }`}
           >
             <div
-              className={`bg-gray w-48 h-full top-0 fixed duration-75  ${
+              className={`bg-gray w-52 h-full top-0 fixed duration-75  ${
                 openSideNav
                   ? "transition-transform ease-linear"
                   : " -translate-x-full transition-transform ease-linear"
               }`}
             >
+              
               <MobileHeader
-                header_name="{-_-}"
+                header_name="CURLEE { }"
                 setOpenSideNav={setOpenSideNav}
                 // bg_color={nav_bg_color}
               />

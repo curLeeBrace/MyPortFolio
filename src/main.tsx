@@ -10,11 +10,11 @@ import LoadingScreen from './components/LoadingScreen/LoadingScreen.tsx';
 createRoot(document.getElementById('root')!).render(
   <BrowserRouter>
   
-    <StrictMode>
+
       <Suspense fallback = {<LoadingScreen/>}>
         <LazyApp/>
       </Suspense>
-    </StrictMode>
+  
 
   </BrowserRouter>
 

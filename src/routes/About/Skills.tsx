@@ -40,7 +40,7 @@ const skills:SkillInterface[] = [
    },
 
    {
-       img_src : `${src_skill_logo}/react.png`,
+       img_src : `${src_skill_logo}/react.svg`,
        rate : 7.8,
        title : "React" 
    },
@@ -122,7 +122,7 @@ const Skills = () => {
                                 />
 
                             </div>
-                            <span className="align-baseline self-center text-white/70">leeandreiwork@gmail.com</span>
+                            <span className="align-baseline self-center text-white/70 z-10">leeandreiwork@gmail.com</span>
             
                         </div>
 
@@ -136,7 +136,7 @@ const Skills = () => {
                                 />
 
                             </div>
-                            <span className="align-baseline self-center text-white/70">Pagsanjan, Laguna</span>
+                            <span className="align-baseline self-center text-white/70 ">Pagsanjan, Laguna</span>
             
                         </div>
                     </div>
