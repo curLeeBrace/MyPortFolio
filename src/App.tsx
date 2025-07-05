@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-     <div className="fixed h-full w-full">
+     {/* <div className="fixed h-full w-svw border-2">
         <Particles
             particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
         
@@ -25,10 +25,12 @@ function App() {
             particleBaseSize={150}  
             speed={2}
             disableRotation
+            className=""
                               
         />
     
-      </div>
+      </div> */}
+
       <NavBar/>
 
       <Routes>

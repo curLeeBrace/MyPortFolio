@@ -19,7 +19,7 @@ interface CircleLogo {
 // }
 
 interface MyWorksInterface {
-  img_src: string;
+  gif_src: string;
   project_name: string;
   project_description: string;
   role: string;
@@ -41,7 +41,7 @@ const MyWorks = () => {
   const [dialog_info, setDialogInfo] = useState<DialogBoxProps>()
   const my_works: MyWorksInterface[] = [
   {
-    img_src: "",
+    gif_src: "/assets/portfolio/ghgi.gif",
     project_name: "Green House Gas Inventory System",
     project_description:
       "This system is our capstone project. It was built to identify which areas in Laguna either municipalities or brgys are most exposed to greenhouse gas emissions (GHGe) by collecting data from residential and commercial sectors through surveys",
@@ -90,7 +90,7 @@ const MyWorks = () => {
 
   },
   {
-    img_src: "",
+    gif_src: "",
     project_name: "Online Ordering System",
     project_description:
       "Just a simple e-commerce website it has a features like   shopee. Made during our second year for final project",
@@ -181,7 +181,9 @@ const MyWorks = () => {
   console.log("WTF" , repo_contributors)
 
   return (
-    <div className="">
+    
+
+    <div className="p-[20px] flex flex-col gap-[90px]">
 
       { openModal && dialog_info && 
 
@@ -202,16 +204,19 @@ const MyWorks = () => {
       {my_works.map((work, index) => (
         <div
           key={index}
-          className="flex border-amber-600 gap-3 flex-wrap"
+          className="flex border-royal-purple gap-3 flex-wrap  border-2 p-[20px] rounded-lg"
         >
           {/* Image/GIF */}
-          <div className="xs:w-full  xl:w-[40%] xl:min-w-[500px] flex flex-col gap-3">
+          <div className="xs:w-full  xl:w-[45%] xl:min-w-[500px] flex flex-col gap-3">
             {/* GIF */}
-            <div className="xs:h-[350px] xl:h-[400px]"></div>
+            <div className="xs:h-[350px] xl:h-[85%] border-2 rounded-t-xl border-royal-purple/60 p-[10px]">
+              <img src={work.gif_src} className="w-full h-full object-contain "/>
+
+            </div>
             {/* Contributors - IMG*/}
 
-            <div className="flex items-center gap-2 px-[10px]">
-              <span className="font-semibold xl:text-lg text-nowrap ">{"Contributors -> "}</span>
+            <div className="flex items-center gap-2 px-[10px] border-2 h-[15%] border-royal-purple/60 rounded-b-xl">
+              <span className="font-semibold xl:text-lg text-nowrap text-white/60 ">{"Collaborators -> "}</span>
 
               <div className="flex justify-start flex-[60%] ml-[10px] gap-2">
                 {repo_contributors.length > 0 && repo_contributors? (
@@ -242,15 +247,15 @@ const MyWorks = () => {
           </div>
 
           {/* Project Infos */}
-          <div className="flex-[50%] shrink p-[20px] flex flex-col justify-around xs:gap-5">
+          <div className="flex-[45%] shrink flex flex-col justify-around xs:gap-5 ">
             {/* Header */}
-            <div className="text-3xl font-semibold">{work.project_name}</div>
+            <div className="text-3xl font-semibold  border-2  border-royal-purple/60 p-[10px] rounded-t-lg">{work.project_name}</div>
             {/* Description */}
-            <p className="p-[10px] text-xl text-white/70">{work.project_description}</p>
+            <p className="p-[10px] text-xl text-white/70 border-2  border-royal-purple/60 ">{work.project_description}</p>
 
             {/* Tech/Tool Stacks */}
-            <div className="flex flex-wrap gap-2 px-[10px] items-center">
-              <div className="font-semibold text-xl xs:w-full">{`Tech Stack - `}</div>
+            <div className="flex flex-wrap gap-2 px-[10px] items-center border-2  border-royal-purple/60 p-[10px]">
+              <div className="font-semibold text-xl xs:max-xl:w-full ">{`Tech Stack - `}</div>
               {work.teck_stacks.map((tech_stack, inner_index)=>(
                     <div
                       key={`tech-${index}${inner_index}`}
@@ -273,14 +278,14 @@ const MyWorks = () => {
             </div>
 
             {/* Role */}
-            <div className="px-[10px] ">
+            <div className="p-[10px] border-2  border-royal-purple/60 ">
               <span className="font-semibold text-xl">Role - </span>
               <span className = "text-lg">{work.role}</span>
             </div>
 
 
             {/* Buttons */}
-            <div className="flex xs:gap-[20px] flex-wrap">
+            <div className="flex xs:gap-[20px] flex-wrap border-2  border-royal-purple/60 p-[10px] rounded-b-xl">
               
                   <StarBorder
                     as="button"
