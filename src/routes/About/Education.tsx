@@ -66,7 +66,7 @@ const Education = () => {
 
   return (
     <div
-      className="relative h-auto flex mt-96 flex-col xs:px-[20px] xs:gap-5  lg:px-[50px] lg:gap-10"
+      className="relative h-auto flex mt-96 flex-col xs:px-[20px] xs:gap-5 md:px-[50px] lg:gap-10"
       ref={ref}
     >
       <div className="self-center">
