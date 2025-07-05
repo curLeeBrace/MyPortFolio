@@ -109,11 +109,11 @@ const Skills = () => {
         
             
             {/* Profile and Skills */}
-            <div className="flex flex-wrap mt-[90px] px-[40px] gap-20">
+            <div className="flex flex-wrap mt-[90px] xs:px-[10px] sm:px-[40px] gap-20">
                 
                 {/* My Picture */}
-                <div className="lg:flex-[20%] xs:flex-[100%] xs:max-lg:items-center lg:min-w-[250px] flex flex-col">
-                    <div className="xs:max-lg:max-w-[500px]">
+                <div className="lg:flex-[20%] xs:flex-[100%] xs:max-lg:items-center lg:min-w-[350px] lg:items-center flex flex-col ">
+                    <div className="lg:max-w-[600px] flex justify-center items-center">
                         <CircularLogo
                             src="/assets/me/me_shade.jpeg"
                             size="100%"
@@ -160,7 +160,7 @@ const Skills = () => {
                 <div className="flex-[65%] flex flex-col ">
 
 
-                    <div className="ml-[25px]">
+                    <div className="text-center mb-[10px] ">
                        <Header header_name="{Skills}"/>
                     </div>
 

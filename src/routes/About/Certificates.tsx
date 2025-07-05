@@ -26,7 +26,7 @@ const Certificates = () => {
     const [certUrl, setCertUrl] = useState<string>("");
     
     return (
-        <div className="flex flex-col  mb-[150px] mt-96 ">
+        <div className="flex flex-col mb-[150px] mt-96 ">
             
         {
             show && <Modal setShow={setShow}>
@@ -45,7 +45,7 @@ const Certificates = () => {
                 {
                     certificate_url.map((url, index) => (   
                         
-                        <motion.div key={index} className="w-[40%] xs:min-w-[320px] lg:min-w-[500px] h-auto mt-[50px] cursor-pointer"
+                        <motion.div key={index} className=" xs:w-[90%] sm:w-[40%] xs:min-w-[320px] lg:min-w-[500px] h-auto mt-[50px] cursor-pointer"
                             initial = {{
                                 opacity : 0
                             }}

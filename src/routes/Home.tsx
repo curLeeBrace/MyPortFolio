@@ -79,7 +79,7 @@ const Home = () => {
                     </div>
 
                     <div className="flex gap-5 justify-center mt-[20px] pb-[20px]">
-                        <div className="flex-1 xs:max-w-[60px] lg:max-w-[60px]">
+                        <div className="flex-1 xs:max-w-[60px] lg:max-w-[50px]">
                             <CircularLogo 
                                 src="/assets/github.svg"
                                 border_size=".1em"
@@ -89,7 +89,7 @@ const Home = () => {
                             />
                         </div>
 
-                        <div className="flex-1 xs:max-w-[60px] lg:max-w-[60px] ">
+                        <div className="flex-1 xs:max-w-[60px] lg:max-w-[50px] ">
                             <CircularLogo 
                                 src="/assets/instagram.svg"
                                 border_size=".1em"
@@ -99,7 +99,7 @@ const Home = () => {
                             />
                         </div>
 
-                          <div className="flex-1 xs:max-w-[60px] lg:max-w-[60px]">
+                          <div className="flex-1 xs:max-w-[60px] lg:max-w-[50px]">
                             <CircularLogo 
                                 src="/assets/fb.svg"
                                 border_size=".1em"
