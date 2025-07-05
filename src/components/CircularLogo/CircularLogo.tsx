@@ -82,7 +82,7 @@ const CircularLogo = ({src, border_color = "#7E22CE",border_size = "5px", border
                     }
                 }}
             >
-                <img src={src} className="h-full w-full object-contain"/>
+                <img src={src} className="h-full w-full object-cover"/>
 
             </div>
 

@@ -5,11 +5,12 @@ interface SynergyProps {
     img_src : string;
     title:string;
     rate : number;
+    years_ofExp : string;
 
 }
 
 
-const Synergy = ({img_src, title, rate}:SynergyProps) => {
+const Synergy = ({img_src, title, rate, years_ofExp}:SynergyProps) => {
 
   
     const ratio = rate/10
@@ -36,9 +37,11 @@ const Synergy = ({img_src, title, rate}:SynergyProps) => {
             <div className="flex-3/5 min-w-[200px] h-full relative flex flex-col justify-center">
             
                 {/* Title and Rate*/}
-                <div className="text-start mb-[5px] ml-[10px]">
-                    <span>
-                        <span className="text-lg font-semibold ">{title}</span> <span className="text-white/80">{rate}/10</span>
+                <div className="text-start mb-[5px] ml-[10px] ">
+                    <span className="flex items-center gap-2">
+                        <span className="text-lg font-semibold ">{title}</span> 
+                        <span className="text-white/80">{rate}/10</span>
+                        <span className="w-full pr-[15px] text-white/80">{`- ${years_ofExp}`}</span>
                     </span>
 
                 </div>

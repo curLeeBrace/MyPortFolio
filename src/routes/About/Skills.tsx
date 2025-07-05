@@ -1,7 +1,6 @@
 
 import Synergy from "../../components/Synergy/Synergy";
 import CircularLogo from "../../components/CircularLogo/CircularLogo";
-import ShinyText from "../../components/ShinyText/ShinyText";
 import Header from "../../components/Header/Header";
 
 
@@ -9,6 +8,7 @@ interface SkillInterface {
     img_src : string;
     title:string;
     rate : number;
+    years_ofExp : string;
 }
 
 const src_skill_logo = "/assets/about/skill_logo"
@@ -18,71 +18,83 @@ const skills:SkillInterface[] = [
     {
        img_src : `${src_skill_logo}/typescript.png`,
        rate : 8,
-       title : "TypeScript" 
+       title : "TypeScript", 
+       years_ofExp : "1 year"
    },
 
    {
        img_src : `${src_skill_logo}/java.png`,
        rate : 7.5,
-       title : "Java" 
+       title : "Java",
+       years_ofExp : "3 years"
    },
 
    {
        img_src : `${src_skill_logo}/python.png`,
        rate : 6.9,
-       title : "Python" 
+       title : "Python", 
+       years_ofExp : "3 months"
    },
 
     {
        img_src : `${src_skill_logo}/javascript.svg`,
        rate : 8,
-       title : "JavaScript" 
+       title : "JavaScript",
+       years_ofExp : "1 year"
    },
 
    {
        img_src : `${src_skill_logo}/react.svg`,
        rate : 7.8,
-       title : "React" 
+       title : "React", 
+       years_ofExp : "2 years"
    },
 
     {
        img_src : `${src_skill_logo}/tailwind-css.svg`,
        rate : 7.5,
-       title : "Tailwind" 
+       title : "Tailwind", 
+       years_ofExp : "2 years"
    },
 
     {
        img_src : `${src_skill_logo}/mysql-database.png`,
        rate : 8.3,
-       title : "MySql" 
+       title : "MySql", 
+       years_ofExp : "3 years"
    },
 
    {
        img_src : `${src_skill_logo}/mongodb.svg`,
        rate : 7.7,
-       title : "MonggoDB" 
+       title : "MonggoDB", 
+       years_ofExp : "2 years"
    },
 
    {
        img_src : `${src_skill_logo}/Odoo.png`,
        rate : 7.2,
-       title : "Odoo" 
+       title : "Odoo", 
+       years_ofExp : "2 months"
    },
     {
        img_src : `${src_skill_logo}/sap.svg`,
        rate : 7.4,
-       title : "SAP" 
+       title : "SAP",
+       years_ofExp : "2 months" 
    },
     {
         img_src : `${src_skill_logo}/html.png`,
         rate : 8,
-        title : "HTML" 
+        title : "HTML", 
+        years_ofExp : "4 years"
     },
 
     {
         img_src : `${src_skill_logo}/css-3.png`,
         rate : 7,
-        title : "CSS" 
+        title : "CSS",
+        years_ofExp : "4 years"
     },
 
 ]
@@ -97,13 +109,13 @@ const Skills = () => {
         
             
             {/* Profile and Skills */}
-            <div className="flex flex-wrap mt-[20px] px-[40px] gap-20">
+            <div className="flex flex-wrap mt-[90px] px-[40px] gap-20">
                 
                 {/* My Picture */}
                 <div className="lg:flex-[20%] xs:flex-[100%] xs:max-lg:items-center lg:min-w-[250px] flex flex-col">
                     <div className="xs:max-lg:max-w-[500px]">
                         <CircularLogo
-                            src="/assets/me/me1.jpg"
+                            src="/assets/me/me_shade.jpeg"
                             size="100%"
                             // border_none
                           
@@ -159,7 +171,8 @@ const Skills = () => {
                                     <Synergy
                                         img_src = {skill.img_src}
                                         rate = {skill.rate}
-                                        title= {skill.title}   
+                                        title= {skill.title}
+                                        years_ofExp={skill.years_ofExp}
                                         
                                     />
                                 </div>

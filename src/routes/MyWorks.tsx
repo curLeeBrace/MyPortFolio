@@ -1,4 +1,4 @@
-import { useEffect, useState, type Dispatch } from "react";
+import { useEffect, useState } from "react";
 import CircularLogo from "../components/CircularLogo/CircularLogo";
 import { Octokit } from "@octokit/core";
 import StarBorder from "../components/StarBorder/StarBorder";
@@ -90,7 +90,7 @@ const MyWorks = () => {
 
   },
   {
-    gif_src: "",
+    gif_src: "/assets/portfolio/oos.gif",
     project_name: "Online Ordering System",
     project_description:
       "Just a simple e-commerce website it has a features like   shopee. Made during our second year for final project",
@@ -122,7 +122,15 @@ const MyWorks = () => {
       },
     ],
     repo_link : "https://github.com/curLeeBrace/Online-Ordering-System",
-    live_view_link :"https://online-ordering-system-hfw6.onrender.com"
+    live_view_link :"https://online-ordering-system-hfw6.onrender.com",
+     dialog_info : {
+       dialog_title : "Please use this account for the testing",
+       dialog_content :"Email : test@gmail.com \n Password : Testing1234",
+       handleOnclick : ()=>{
+          window.open(my_works[1].live_view_link, "_blank")
+          setOpenModal(false)
+       }
+    }
   },
 ];
 
@@ -183,7 +191,7 @@ const MyWorks = () => {
   return (
     
 
-    <div className="p-[20px] flex flex-col gap-[90px]">
+    <div className="px-[20px] pb-[20px] flex flex-col gap-[90px] mt-[70px]">
 
       { openModal && dialog_info && 
 

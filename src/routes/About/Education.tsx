@@ -1,6 +1,5 @@
 import {
   motion,
-  useMotionValueEvent,
   useScroll,
   useSpring,
   useTransform,

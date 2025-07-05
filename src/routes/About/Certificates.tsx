@@ -2,7 +2,6 @@
 import { motion } from "framer-motion"
 import Header from "../../components/Header/Header"
 import SpotlightCard from "../../components/SpotlightCard/SpotlightCard"
-import { RGB_COLOR } from "../../utils/color_picker"
 import { useState } from "react"
 import Modal from "../../components/Modal/Modal"
 

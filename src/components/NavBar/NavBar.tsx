@@ -23,11 +23,7 @@ const LINKS: ILINKS[] = [
   },
   {
     url: "/my-works",
-    url_display_name: "Portfolio",
-  },
-  {
-    url: "/contact",
-    url_display_name: "Contact",
+    url_display_name: "Projects",
   },
 ];
 
@@ -59,12 +55,12 @@ const NavBar = () => {
   return (
     <>
       {window_size >= 768 ? (
-        <motion.div className={`h-14 z-50 sticky top-0 right-0 flex flex-col justify-center`} style={{backgroundColor : nav_bg_color}}>
+        <motion.div className={`h-14 z-50 fixed top-0 w-full right-0 flex flex-col justify-center`} style={{backgroundColor : nav_bg_color}}>
           <div className="absolute ml-5 text-[25px]">
             <Logo />
           </div>
 
-          <div className="flex gap-1 pr-5 h-full text-[18px] self-end">
+          <div className="flex gap-5 pr-5 h-full text-[18px] self-end ">
             {LINKS.map(({ url, url_display_name }, index) => (
               <NavLink
                 to={url}
@@ -81,7 +77,7 @@ const NavBar = () => {
           </div>
         </motion.div>
       ) : (
-        <div className="sticky top-0 z-50 w-full">
+        <div className="fixed top-0 z-50 w-full">
 
           <div className="w-full">
               <MobileHeader header_name="CURLEE { }" setOpenSideNav={setOpenSideNav} bg_color={nav_bg_color} />

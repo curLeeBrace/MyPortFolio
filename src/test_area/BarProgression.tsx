@@ -2,7 +2,6 @@ import {
   motion,
   useScroll,
   useTransform,
-  useInView,
   useMotionValueEvent,
 } from "framer-motion";
 import {useRef } from "react";

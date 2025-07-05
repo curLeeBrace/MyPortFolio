@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-     {/* <div className="fixed h-full w-svw border-2">
+     <div className="fixed h-full w-full">
         <Particles
             particleColors={[COLOR["royal-purple"], COLOR["royal-purple"]]}
         
@@ -29,7 +29,7 @@ function App() {
                               
         />
     
-      </div> */}
+      </div>
 
       <NavBar/>
 
