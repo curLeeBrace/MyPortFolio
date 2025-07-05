@@ -287,7 +287,7 @@ const MyWorks = () => {
 
             {/* Role */}
             <div className="p-[10px] border-2  border-royal-purple/60 ">
-              <span className="font-semibold text-xl">Role - </span>
+              <span className="font-semibold text-xl">My Role - </span>
               <span className = "text-lg">{work.role}</span>
             </div>
 
