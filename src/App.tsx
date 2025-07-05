@@ -38,7 +38,7 @@ function App() {
         <Route path="/" element = {<Home/>}/>
         <Route path="/home" element = {<Home/>}/>
         <Route path="/about-me" element = {<About/>}/>
-        <Route path="/my-works" element = {<MyWorks/>}/>
+        <Route path="/projects" element = {<MyWorks/>}/>
         <Route path="/test" element = {<Test/>}/>
         <Route path="*" element = {"404 not found"}/>
 

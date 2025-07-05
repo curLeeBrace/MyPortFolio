@@ -14,7 +14,7 @@ const Home = () => {
     const navigate = useNavigate();
     const handleOnClick = () => {
 
-        navigate("/about-me")
+        navigate("/projects")
     }
 
     return(

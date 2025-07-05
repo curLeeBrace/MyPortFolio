@@ -22,7 +22,7 @@ const LINKS: ILINKS[] = [
     url_display_name: "About",
   },
   {
-    url: "/my-works",
+    url: "/projects",
     url_display_name: "Projects",
   },
 ];
